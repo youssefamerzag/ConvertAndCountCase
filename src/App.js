@@ -1,23 +1,50 @@
-import logo from './logo.svg';
+
+import { useState } from 'react';
 import './App.css';
 
 function App() {
+
+  const [words , setwords] = useState('')
+  const [wordsres , setwordsres] = useState(0)
+  const [lettersres , setlettersres] = useState(0)
+
+  function inp (e) {
+    setwords(e.target.value)
+  }
+
+  function countwords() {
+    const constword = words.split(" ").length
+    setwordsres(constword)
+  }
+
+  function countletters() {
+    const letters = words.length
+    setlettersres(letters)
+  }
+
+  function highletters() {
+    const upperletters = words.toUpperCase()
+    setwords(upperletters)
+  }
+
+  function lowletters() {
+    const lowerletters = words.toLowerCase()
+    setwords(lowerletters)
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Word Counter</h1>
+      <p>Type in the textbox</p>
+      <textarea value={words} onChange={inp}></textarea><br></br>
+      <button onClick={countwords}>Count Words</button>
+      <button onClick={countletters}>Count Words</button>
+      <button onClick={highletters}>Upper Case</button>
+      <button onClick={lowletters}>Lower Case</button>
+      <p>Word Counter :</p>
+      <h1>{wordsres}</h1>
+      <p>Letters Counter :</p>
+      <h1>{lettersres}</h1>
     </div>
   );
 }

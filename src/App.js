@@ -13,13 +13,15 @@ function App() {
   }
 
   function countwords() {
-    const constword = words.split(" ").length
-    setwordsres(constword)
+    const constword = words.split(" ").filter((word) => word !== '').length;
+
+      setwordsres(constword)
+      console.log(wordsres)
   }
 
-  function countletters() {
-    const letters = words.length
-    setlettersres(letters)
+  function countLetters() {
+    const lettersCount = words.replace(/\s/g, '').length;
+    setlettersres(lettersCount);
   }
 
   function highletters() {
@@ -39,7 +41,7 @@ function App() {
       <textarea value={words} onChange={inp}></textarea><br></br>
       <div id='buttons'>
         <button onClick={countwords}>Count Words</button>
-        <button onClick={countletters}>Count Words</button>
+        <button onClick={countLetters}>Count Letters</button>
         <button onClick={highletters}>Upper Case</button>
         <button onClick={lowletters}>Lower Case</button>
       </div>

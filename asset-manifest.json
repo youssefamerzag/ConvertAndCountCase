@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/ConvertAndCountCase/static/css/main.92d35b8b.css",
+    "main.js": "/ConvertAndCountCase/static/js/main.425e64ba.js",
+    "index.html": "/ConvertAndCountCase/index.html",
+    "main.92d35b8b.css.map": "/ConvertAndCountCase/static/css/main.92d35b8b.css.map",
+    "main.425e64ba.js.map": "/ConvertAndCountCase/static/js/main.425e64ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.92d35b8b.css",
+    "static/js/main.425e64ba.js"
+  ]
+}

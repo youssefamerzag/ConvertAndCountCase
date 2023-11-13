@@ -37,10 +37,12 @@ function App() {
       <h1>Word Counter</h1>
       <p>Type in the textbox</p>
       <textarea value={words} onChange={inp}></textarea><br></br>
-      <button onClick={countwords}>Count Words</button>
-      <button onClick={countletters}>Count Words</button>
-      <button onClick={highletters}>Upper Case</button>
-      <button onClick={lowletters}>Lower Case</button>
+      <div id='buttons'>
+        <button onClick={countwords}>Count Words</button>
+        <button onClick={countletters}>Count Words</button>
+        <button onClick={highletters}>Upper Case</button>
+        <button onClick={lowletters}>Lower Case</button>
+      </div>
       <p>Word Counter :</p>
       <h1>{wordsres}</h1>
       <p>Letters Counter :</p>
